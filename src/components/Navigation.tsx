@@ -91,6 +91,15 @@ export default function Navigation() {
                                     {link.name}
                                 </a>
                             ))}
+                            <a
+                                href="/resume.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-4 px-5 py-3 border border-justice-gold text-justice-gold text-center font-medium rounded hover:bg-justice-gold hover:text-charcoal transition-all duration-300"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                Resume
+                            </a>
                         </div>
                     </motion.div>
                 )}
