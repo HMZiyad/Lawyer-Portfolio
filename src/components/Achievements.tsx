@@ -48,7 +48,7 @@ const AchievementCategory = ({ title, icon: Icon, count, children }: { title: st
 
 export default function Achievements() {
     return (
-        <section id="achievements" className="py-24 bg-charcoal relative overflow-hidden">
+        <section id="achievements" className="py-10 bg-charcoal relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-justice-gold/5 rounded-full blur-[100px] -z-10" />
 

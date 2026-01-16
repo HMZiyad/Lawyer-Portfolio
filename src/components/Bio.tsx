@@ -10,7 +10,7 @@ export default function Bio() {
     ];
 
     return (
-        <section id="bio" className="py-20 bg-charcoal relative overflow-hidden">
+        <section id="bio" className="py-10 bg-charcoal relative overflow-hidden">
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay" />
 

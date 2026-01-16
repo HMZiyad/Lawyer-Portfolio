@@ -31,7 +31,7 @@ export default function Publications() {
     ];
 
     return (
-        <section id="publications" className="py-24 bg-charcoal relative overflow-hidden">
+        <section id="publications" className="py-10 bg-charcoal relative overflow-hidden">
             <SectionWrapper className="container mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

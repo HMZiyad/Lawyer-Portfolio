@@ -42,7 +42,7 @@ export default function MediaCoverage() {
     ];
 
     return (
-        <section id="media" className="py-24 bg-charcoal relative overflow-hidden">
+        <section id="media" className="py-10 bg-charcoal relative overflow-hidden">
             {/* Background Texture */}
             <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none"
                 style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)', backgroundSize: '40px 40px' }}

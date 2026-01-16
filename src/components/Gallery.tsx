@@ -89,7 +89,7 @@ export default function Gallery() {
             opacity: 1,
             rotateY: 0,
             filter: "brightness(1) blur(0px)",
-            transition: { duration: 0.5 }
+            transition: { type: "spring" as const, stiffness: 300, damping: 30 }
         },
         left: {
             x: "-60%",
@@ -98,7 +98,7 @@ export default function Gallery() {
             opacity: 0.7,
             rotateY: 15,
             filter: "brightness(0.7) blur(2px)",
-            transition: { duration: 0.5 }
+            transition: { type: "spring" as const, stiffness: 300, damping: 30 }
         },
         right: {
             x: "60%",
@@ -107,26 +107,26 @@ export default function Gallery() {
             opacity: 0.7,
             rotateY: -15,
             filter: "brightness(0.7) blur(2px)",
-            transition: { duration: 0.5 }
+            transition: { type: "spring" as const, stiffness: 300, damping: 30 }
         },
         hiddenLeft: {
-            x: "-120%",
+            x: "-100%",
             scale: 0.6,
             zIndex: 10,
             opacity: 0,
-            transition: { duration: 0.5 }
+            transition: { duration: 0.3 }
         },
         hiddenRight: {
-            x: "120%",
+            x: "100%",
             scale: 0.6,
             zIndex: 10,
             opacity: 0,
-            transition: { duration: 0.5 }
+            transition: { duration: 0.3 }
         }
     };
 
     return (
-        <section id="gallery" className="py-24 bg-charcoal relative overflow-hidden min-h-[900px] flex items-center">
+        <section id="gallery" className="py-10 bg-charcoal relative overflow-hidden min-h-[700px] flex items-center">
             {/* Background Gradient & Texture */}
             <div className="absolute inset-0 bg-gradient-to-b from-charcoal via-[#1a1c23] to-charcoal pointer-events-none" />
             <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none"
@@ -190,17 +190,19 @@ export default function Gallery() {
 
                                 return (
                                     <motion.div
-                                        key={`${index}-${offset}`} // Unique key for AnimatePresence
+                                        key={index} // Stable key based on image index
                                         variants={variants}
                                         initial={direction > 0 ? (offset === 1 ? 'right' : (offset === 0 ? 'left' : 'center')) : (offset === -1 ? 'left' : (offset === 0 ? 'right' : 'center'))}
                                         animate={position}
+                                        exit={direction > 0 ? 'hiddenLeft' : 'hiddenRight'}
+                                        style={{ transformStyle: 'preserve-3d', willChange: 'transform, opacity, filter' }} // Optimization
                                         className="absolute w-[280px] md:w-[380px] aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border border-white/5 bg-charcoal"
-                                        style={{ transformStyle: 'preserve-3d' }}
                                     >
                                         <img
                                             src={images[index].url}
                                             alt={images[index].title}
                                             className="w-full h-full object-cover"
+                                            draggable={false}
                                         />
 
                                         {/* Overlay Content (Only visible on center/active card) */}
@@ -208,7 +210,8 @@ export default function Gallery() {
                                             <motion.div
                                                 initial={{ opacity: 0, y: 20 }}
                                                 animate={{ opacity: 1, y: 0 }}
-                                                transition={{ delay: 0.3 }}
+                                                exit={{ opacity: 0, y: 20 }}
+                                                transition={{ delay: 0.1 }}
                                                 className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/90 via-black/50 to-transparent"
                                             >
                                                 <div className="flex items-center gap-2 text-justice-gold text-xs font-bold uppercase tracking-wider mb-2">

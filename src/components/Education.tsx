@@ -4,7 +4,7 @@ import SectionWrapper from './SectionWrapper';
 
 export default function Education() {
     return (
-        <section id="education" className="py-24 bg-charcoal relative">
+        <section id="education" className="py-10 bg-charcoal relative">
             <SectionWrapper className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

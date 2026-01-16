@@ -138,7 +138,7 @@ export default function ExperienceTimeline() {
     const containerRef = useRef(null);
 
     return (
-        <section id="experience" className="py-20 bg-charcoal relative" ref={containerRef}>
+        <section id="experience" className="py-10 bg-charcoal relative" ref={containerRef}>
             <SectionWrapper className="container mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
