@@ -18,7 +18,10 @@ export default function Navigation() {
         { name: 'Home', href: '#hero' },
         { name: 'Bio', href: '#bio' },
         { name: 'Experience', href: '#experience' },
-        { name: 'Research', href: '#research' },
+        { name: 'Publications', href: '#publications' },
+        { name: 'Achievements', href: '#achievements' },
+        { name: 'Media', href: '#media' },
+        { name: 'Gallery', href: '#gallery' },
         { name: 'Contact', href: '#contact' },
     ];
 

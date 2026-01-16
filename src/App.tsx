@@ -3,7 +3,10 @@ import Hero from './components/Hero';
 import Bio from './components/Bio';
 import ExperienceTimeline from './components/ExperienceTimeline';
 import Education from './components/Education';
-import MootGallery from './components/MootGallery';
+import Publications from './components/Publications';
+import Achievements from './components/Achievements';
+import MediaCoverage from './components/MediaCoverage';
+import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 
 function App() {
@@ -15,7 +18,10 @@ function App() {
         <Bio />
         <ExperienceTimeline />
         <Education />
-        <MootGallery />
+        <Publications />
+        <Achievements />
+        <MediaCoverage />
+        <Gallery />
       </main>
       <Footer />
     </div>
