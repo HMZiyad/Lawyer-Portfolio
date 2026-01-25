@@ -22,13 +22,13 @@ export default function Gallery() {
         {
             url: "/gallery/shadow.jpeg",
             title: "The Shots",
-            location: "The Hague de",
+            location: "The Hague",
             desc: "A pause in the journey, framed by light and shadow."
         },
         {
             url: "/gallery/rafi2.jpeg",
             title: "Representing",
-            location: " International Criminal Court,Netherlands",
+            location: " International Criminal Court",
             desc: "In front of the International Criminal Court, representing Bangladesh on the world stage of law."
         },
         {
