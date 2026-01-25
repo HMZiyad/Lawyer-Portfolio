@@ -6,53 +6,48 @@ import SectionWrapper from './SectionWrapper';
 export default function Gallery() {
     // Local images from public/gallery
     const images = [
-        {
-            url: "/gallery/court.jpeg",
-            title: "The Courtroom",
-            location: "The Hague",
-            desc: "The prestigious hall where justice is served."
-        },
+
         {
             url: "/gallery/rafi.jpeg",
             title: "In Action",
-            location: "IBA ICC",
-            desc: "Presenting arguments during the competition rounds."
+            location: "Peace Palace, The Hague",
+            desc: "At the ICJ, The Hague—where law and justice converge."
         },
         {
-            url: "/gallery/building.jpeg",
-            title: "The Venue",
-            location: "Leiden Univ",
-            desc: "The historic Grotius Center for International Legal Studies."
+            url: "/gallery/learning.png",
+            title: "Learning",
+            location: "Leiden University",
+            desc: "Learning from Michael Scharf: a masterclass in international law and courtroom strategy."
+        },
+        {
+            url: "/gallery/shadow.jpeg",
+            title: "The Shots",
+            location: "The Hague de",
+            desc: "A pause in the journey, framed by light and shadow."
         },
         {
             url: "/gallery/rafi2.jpeg",
             title: "Representing",
-            location: "Netherlands",
-            desc: "Proudly representing the university on the global stage."
+            location: " International Criminal Court,Netherlands",
+            desc: "In front of the International Criminal Court, representing Bangladesh on the world stage of law."
         },
         {
-            url: "/gallery/clock.jpeg",
-            title: "Timeless Justice",
-            location: "Architecture",
-            desc: "Capturing the intricate details of the legal architecture."
-        },
-        {
-            url: "/gallery/rafi3.jpeg",
-            title: "Reflection",
-            location: "Post-Round",
-            desc: "A moment of reflection after an intense mooting session."
+            url: "/gallery/award.png",
+            title: "Award",
+            location: "International Criminal Court",
+            desc: "With the IBA ICC Spirit of the Competition Award,proud of my team's excellence."
         },
         {
             url: "/gallery/art.jpeg",
             title: "Legal Art",
-            location: "Court Decor",
-            desc: "Artistic elements symbolizing the weight of the law."
+            location: "The Hague",
+            desc: "Where diplomacy and dispute resolution converge artwork from the Permanent Court of Arbitration."
         },
         {
             url: "/gallery/clock2.jpeg",
             title: "Details",
             location: "Perspective",
-            desc: "Focusing on the finer details that make up the big picture."
+            desc: "A closer look at the architecture of the peace palace."
         }
     ];
 

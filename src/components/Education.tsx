@@ -46,7 +46,6 @@ export default function Education() {
                             <h4 className="text-xl font-bold text-white">Bachelor of Laws (LL.B.)</h4>
                             <p className="text-justice-gold font-medium">University of Dhaka</p>
                             <p className="text-gray-400 text-sm mt-1">2018 – 2022</p>
-                            <p className="text-gray-300 mt-2">CGPA: 2.84/4.00</p>
                         </motion.div>
                     </div>
 
